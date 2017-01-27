@@ -1,0 +1,18 @@
+
+# BEGIN WEBSITEVALUE
+
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+RewriteRule ^index/(.*)$ ./index.php?type=$1 [L]
+RewriteRule ^page/(.*)$ ./redirect_page.php?permalink=$1 [L]
+RewriteRule ^contact$ ./redirect_contact.php [L]
+RewriteRule ^contact$ ./redirect_contact.php [L]
+RewriteRule ^contact/(.*)$ ./redirect_contact.php?permalink=$1 [L]
+ErrorDocument 404 /404.php
+
+</IfModule> 
+
+
+
+# END WEBSITEVALUE         
